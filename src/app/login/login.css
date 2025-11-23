@@ -1,0 +1,145 @@
+/* Estilo para o título principal da página */
+.main-title {
+  position: absolute; 
+  top: 50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 4em; 
+  color: white; 
+  text-align: center; 
+  font-family: 'Raleway', sans-serif; 
+}
+
+/* Contêiner principal da tela de login */
+.login-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh; 
+  position: relative; 
+  z-index: 1; 
+}
+
+/* Estilo para o vídeo de fundo */
+.background-video {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1; 
+}
+
+/* Estilo para o título do formulário (h2) */
+h2 {
+  color: #ffffff; 
+  font-size: 2.8em; 
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+/* Linha decorativa abaixo do título h2 */
+h2::after {
+  content: ''; 
+  display: block; 
+  width: 80px; 
+  height: 4px;
+  background: #3498db; 
+  margin: 15px auto; 
+}
+
+/* Estilo do contêiner do formulário de login */
+.login-form {
+  background: transparent; 
+  padding: 40px;
+  border-radius: 15px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); 
+  width: 100%; 
+  max-width: 400px; 
+}
+
+/* Efeito de hover para o formulário */
+.login-form:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilo dos campos de entrada (input) */
+input {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 1.1em;
+  background: rgba(204, 204, 204, 0.8);
+}
+
+/* Estilo do input quando está em foco */
+input:focus {
+  border-color: #3498db; 
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1); 
+  background: white; 
+}
+
+/* Estilo do texto do placeholder */
+input::placeholder {
+  color: white;
+}
+
+/* Estilo do botão de login */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+/* Efeito de hover para o botão */
+button:hover {
+  transform: translateY(-2px); 
+}
+
+/* Efeito de clique para o botão */
+button:active {
+  transform: translateY(0); 
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+  color: #e74c3c; 
+  text-align: center;
+  background: #fdf0ef; 
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #fadbd8; 
+}
+
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 30px 20px; 
+  }
+
+  h2 {
+    font-size: 2.2em; 
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1.1em; 
+  }
+}

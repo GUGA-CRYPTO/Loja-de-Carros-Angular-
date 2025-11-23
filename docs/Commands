@@ -1,0 +1,7 @@
+
+Para rodar o server
+json-server db.json
+
+Para rodar o site 
+ng serve --open
+

@@ -1,0 +1,29 @@
+<header class="header" *ngIf="isLoggedIn">
+  <nav class="nav-container">
+    <a [routerLink]="isAdmin ? '/admin' : '/cars'" class="logo">
+      <span class="logo-text">Luxury Cars</span>
+    </a>
+    
+    <div class="nav-links">
+      <!-- Links para Admin -->
+      <ng-container *ngIf="isAdmin">
+        <a routerLink="/admin" class="nav-link" routerLinkActive="active">Painel</a>
+        <a routerLink="/admin/cadastrar" class="nav-link" routerLinkActive="active">Cadastrar</a>
+        <a routerLink="/admin/consultar" class="nav-link" routerLinkActive="active">Consultar</a>
+      </ng-container>
+
+      <!-- Links para Cliente -->
+      <ng-container *ngIf="!isAdmin">
+        <a routerLink="/cars" class="nav-link" routerLinkActive="active">Carros</a>
+        <a routerLink="/cart" class="nav-link cart-icon" routerLinkActive="active">
+          Carrinho
+          <span class="cart-count" *ngIf="cartCount > 0">{{cartCount}}</span>
+        </a>
+      </ng-container>
+
+      <button class="logout-btn" (click)="logout()">
+        <span class="logout-text">Sair</span>
+      </button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,45 @@
+
+<div class="form-container">
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="/novo.mp4" type="video/mp4">
+  </video>
+  
+   <div class="content-overlay">
+    <h2>{{ isEditMode ? 'Atualizar Carro' : 'Cadastrar Novo Carro' }}</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" [(ngModel)]="car.name" placeholder="Ex: Honda Civic" required>
+      </div>
+
+      <div class="form-group">
+        <label for="brand">Marca</label>
+        <input type="text" id="brand" name="brand" [(ngModel)]="car.brand" placeholder="Ex: Honda" required>
+      </div>
+
+      <div class="form-group">
+        <label for="model">Modelo</label>
+        <input type="text" id="model" name="model" [(ngModel)]="car.model" placeholder="Ex: Civic" required>
+      </div>
+
+      <div class="form-group">
+        <label for="year">Ano</label>
+        <input type="number" id="year" name="year" [(ngModel)]="car.year" placeholder="Ex: 2023" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Preço</label>
+        <input type="number" id="price" name="price" [(ngModel)]="car.price" placeholder="Ex: 78000" required>
+      </div>
+
+      <div class="form-group">
+        <label for="image">URL da Imagem</label>
+        <input type="url" id="image" name="image" [(ngModel)]="car.image" placeholder="Ex: https://example.com/car.jpg" required>
+      </div>
+
+      <button type="submit" [disabled]="isLoading">
+        {{ isEditMode ? 'Salvar Alterações' : 'Cadastrar Carro' }}
+      </button>
+    </form>
+  </div>
+</div>

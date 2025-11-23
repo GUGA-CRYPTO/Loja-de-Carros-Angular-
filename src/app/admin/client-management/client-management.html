@@ -1,0 +1,79 @@
+<div class="client-management-container">
+  <h2>Gerenciar Clientes</h2>
+
+  <div class="add-client-section">
+    <h3>Cadastrar Novo Cliente</h3>
+    <div class="form-group">
+      <input 
+        type="text" 
+        [(ngModel)]="newClient.name" 
+        placeholder="Nome" 
+        class="form-input">
+      <input 
+        type="email" 
+        [(ngModel)]="newClient.email" 
+        placeholder="Email" 
+        class="form-input">
+      <input 
+        type="password" 
+        [(ngModel)]="newClient.password" 
+        placeholder="Senha" 
+        class="form-input">
+      <button (click)="addClient()" class="btn-add">Cadastrar Cliente</button>
+    </div>
+  </div>
+
+  <div class="clients-list-section">
+    <h3>Lista de Clientes</h3>
+    <table class="clients-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients" class="client-row">
+          <td>{{client.id}}</td>
+          <td>{{client.name}}</td>
+          <td>{{client.email}}</td>
+          <td class="action-buttons">
+            <button (click)="selectClient(client)" class="btn-edit">Editar</button>
+            <button (click)="deleteClient(client.id)" class="btn-delete">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="clients.length === 0" class="no-clients">
+      <p>Nenhum cliente cadastrado ainda.</p>
+    </div>
+  </div>
+
+  <div *ngIf="selectedClient" class="edit-client-section">
+    <h3>Editar Cliente</h3>
+    <div class="form-group">
+      <input 
+        type="text" 
+        [(ngModel)]="selectedClient.name" 
+        placeholder="Nome" 
+        class="form-input">
+      <input 
+        type="email" 
+        [(ngModel)]="selectedClient.email" 
+        placeholder="Email" 
+        class="form-input">
+      <input 
+        type="password" 
+        [(ngModel)]="selectedClient.password" 
+        placeholder="Senha" 
+        class="form-input">
+      <div class="form-buttons">
+        <button (click)="updateClient()" class="btn-save">Salvar Alterações</button>
+        <button (click)="cancelEdit()" class="btn-cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

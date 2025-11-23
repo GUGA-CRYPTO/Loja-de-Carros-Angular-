@@ -1,0 +1,53 @@
+<div class="admin-container">
+  <h2>Admin Painel</h2>
+
+  <h3>Add Novo Carro</h3>
+  <input type="text" [(ngModel)]="newCar.name" placeholder="Nome">
+  <input type="text" [(ngModel)]="newCar.brand" placeholder="Marca">
+  <input type="text" [(ngModel)]="newCar.model" placeholder="Modelo">
+  <input type="number" [(ngModel)]="newCar.year" placeholder="Ano">
+  <input type="number" [(ngModel)]="newCar.price" placeholder="Preço">
+  <input type="text" [(ngModel)]="newCar.image" placeholder="Image URL">
+  <button (click)="addCar()" class="add-car-btn">Add Car</button>
+
+  <h3>Car List</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Ano</th>
+        <th>Preço</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <td>{{car.name}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.price}}</td>
+        <td class="action-buttons">
+          <button (click)="selectCar(car)">Edit</button>
+          <button (click)="deleteCar(car.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="selectedCar">
+    <h3>Edit Car</h3>
+    <input type="text" [(ngModel)]="selectedCar.name" placeholder="Name">
+    <input type="text" [(ngModel)]="selectedCar.brand" placeholder="Marca">
+    <input type="text" [(ngModel)]="selectedCar.model" placeholder="Modelo">
+    <input type="number" [(ngModel)]="selectedCar.year" placeholder="Ano">
+    <input type="number" [(ngModel)]="selectedCar.price" placeholder="Preço">
+    <input type="text" [(ngModel)]="selectedCar.image" placeholder="Image URL">
+    <button (click)="updateCar()">Update Car</button>
+  </div>
+
+  <hr style="margin: 40px 0; border: none; border-top: 2px solid #ddd;">
+  <app-client-management></app-client-management>
+</div>

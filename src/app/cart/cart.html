@@ -1,0 +1,37 @@
+<div class="video-background">
+  <video autoplay muted loop id="background-video">
+    <source src="/ferrari.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="cart-container">
+  <h2>Carrinho de Compras</h2>
+  
+  <div *ngIf="cartItems.length === 0" class="cart-empty">
+    Seu carrinho está vazio
+  </div>
+
+  <div *ngIf="cartItems.length > 0">
+    <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+      <img [src]="item.car.image" [alt]="item.car.name">
+      
+      <div class="item-details">
+        <span class="item-name">{{item.car.name}}</span>
+        <span class="item-price">R$ {{item.car.price | number:'1.2-2'}}</span>
+      </div>
+      
+      <div class="quantity-controls">
+        <button class="quantity-btn" (click)="updateQuantity(i, item.quantity - 1)">-</button>
+        <span>{{item.quantity}}</span>
+        <button class="quantity-btn" (click)="updateQuantity(i, item.quantity + 1)">+</button>
+      </div>
+      
+      <button class="remove-btn" (click)="removeFromCart(i)">Remover</button>
+    </div>
+
+    <div class="cart-total">
+      <span class="total-amount">Total: R$ {{total | number:'1.2-2'}}</span>
+      <button class="checkout-btn" (click)="checkout()">Finalizar Compra</button>
+    </div>
+  </div>
+</div>

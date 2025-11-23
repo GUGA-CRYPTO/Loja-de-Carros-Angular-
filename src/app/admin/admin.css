@@ -1,0 +1,46 @@
+/* Contêiner principal do painel de administração */
+.admin-container {
+  padding: 20px; 
+}
+
+/* Estilo base para a tabela */
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+/* Estilo para as células do cabeçalho (th) e do corpo (td) */
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px; 
+  text-align: left; 
+}
+
+/* Estilo para os campos de entrada de texto */
+input {
+  margin: 5px; 
+}
+
+/* Estilo para o botão de adicionar carro */
+.add-car-btn {
+  background-color: #4CAF50; 
+  border: none; 
+  color: white; 
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  border-radius: 8px;
+  transition: background-color 0.3s; 
+}
+
+/* Efeito de hover para o botão de adicionar */
+.add-car-btn:hover {
+  background-color: #45a049; 
+}
+
+/* Estilo para os botões de ação na tabela */
+.action-buttons button {
+  margin-right: 5px;
+}

@@ -1,0 +1,180 @@
+/* Contêiner principal da lista de carros */
+.car-list-container {
+  padding: 40px;
+  background: linear-gradient(135deg, #f6f8fa 0%, #e9ecef 100%); 
+  min-height: 100vh; 
+}
+
+/* Estilo do título da página */
+h2 {
+  text-align: center;
+  color: #2c3e50; 
+  margin-bottom: 40px;
+  font-size: 2.8em;
+}
+
+/* Linha decorativa abaixo do título */
+h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db; 
+  margin: 15px auto; 
+}
+
+/* Layout em grid para a lista de carros */
+.car-list {
+  display: grid;
+  /* Cria colunas responsivas: elas terão no mínimo 320px e se ajustarão ao espaço */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px; 
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
+/* Estilo individual de cada cartão de carro */
+.car-card {
+  background: white;
+  border-radius: 15px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); 
+  overflow: hidden;
+  transition: all 0.3s ease; 
+}
+
+/* Efeito de hover no cartão: levanta e aumenta a sombra */
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Contêiner da imagem para controlar o tamanho e o overflow */
+.car-image-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+/* Estilo da imagem do carro */
+.car-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: transform 0.5s ease; 
+}
+
+/* Efeito de zoom na imagem ao passar o mouse sobre o cartão */
+.car-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Seção de detalhes do carro */
+.car-details {
+  padding: 20px;
+}
+
+/* Nome do carro */
+.car-card h3 {
+  color: #2c3e50;
+  font-size: 1.6em;
+  margin: 0 0 10px;
+}
+
+/* Marca e modelo do carro */
+.car-brand-model {
+  color: #3498db;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+/* Grid para informações como ano e preço */
+.car-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.car-info p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Preço do carro */
+.car-price {
+  color: #27ae60; 
+  font-size: 1.5em !important; 
+  font-weight: 600;
+}
+
+/* Contêiner para os botões de ação do admin */
+.admin-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Estilo base para os botões de admin */
+.admin-actions button {
+  flex: 1; 
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Botão de editar */
+.edit-btn {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Botão de deletar */
+.delete-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Botão de comprar/adicionar ao carrinho */
+.buy-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 1rem;
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Media query para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .car-list-container {
+    padding: 20px; 
+  }
+
+  .car-list {
+    /* Ajusta o tamanho mínimo das colunas para telas menores */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 2.2em; 
+  }
+}

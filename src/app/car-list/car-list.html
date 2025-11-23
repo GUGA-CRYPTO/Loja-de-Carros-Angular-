@@ -1,0 +1,35 @@
+<div class="car-list-container">
+  <h2>{{isAdmin ? 'Gerenciar Carros' : 'Nossa Coleção de Carros'}}</h2>
+  
+  <div class="car-list">
+    <div *ngFor="let car of cars" class="car-card">
+      
+      <div class="car-image-container">
+        <img [src]="car.image || 'https://via.placeholder.com/400x300?text=Imagem+do+Carro'" [alt]="car.name">
+      </div>
+      
+      <div class="car-details">
+        <h3>{{car.name}}</h3>
+        <p class="car-brand-model">{{car.brand}} {{car.model}}</p>
+        
+        <div class="car-info">
+          <p><strong>Ano:</strong> {{car.year}}</p>
+          <p class="car-price">R$ {{car.price | number:'1.2-2'}}</p>
+        </div>
+        
+        <div class="admin-actions" *ngIf="isAdmin">
+          <button class="edit-btn" routerLink="/admin/atualizar/{{car.id}}">
+            Atualizar
+          </button>
+          <button class="delete-btn" (click)="deleteCar(car.id)">
+            Excluir
+          </button>
+        </div>
+
+        <button *ngIf="!isAdmin" class="buy-btn" (click)="addToCart(car)">
+          Adicionar ao Carrinho
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
