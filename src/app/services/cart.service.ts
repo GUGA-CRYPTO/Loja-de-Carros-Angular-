@@ -70,3 +70,4 @@ export class CartService {
       total + (item.car.price * item.quantity), 0);
   }
 }
+

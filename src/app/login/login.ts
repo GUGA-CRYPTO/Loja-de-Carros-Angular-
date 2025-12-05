@@ -21,6 +21,7 @@ export class LoginComponent implements AfterViewInit {
     private readonly authService: AuthService,
     private readonly router: Router
   ) { }
+  
   ngAfterViewInit() {
     const video = document.querySelector('.background-video') as HTMLVideoElement;
     if (video) {

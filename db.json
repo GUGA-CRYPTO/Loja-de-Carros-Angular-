@@ -14,8 +14,8 @@
       "name": "Porsche 911",
       "brand": "Porsche",
       "model": "911",
-      "year": 2024,
-      "price": 1200000,
+      "year": 2020,
+      "price": 1200,
       "image": "https://cdn.motor1.com/images/mgl/vxnmnK/s1/911-carrera-gts-2025.jpg"
     },
     {
@@ -61,16 +61,10 @@
       "model": "Veneno",
       "year": 2024,
       "price": 4000000,
-      "image": "https://th.bing.com/th/id/OIP.7wRUlOmMPewtLoSI8ulAMwHaEK?w=313&h=181&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+      "image": "https://th.bing.com/th/id/R.2e3706c111d9b4a841b0cd04a04cab9a?rik=hA7L%2fSkdCyLLLA&pid=ImgRaw&r=0"
     }
   ],
   "clients": [
-    {
-      "id": "1",
-      "name": "João Silva",
-      "email": "joao@gmail.com",
-      "password": "senha123"
-    },
     {
       "id": "2",
       "name": "Mariah Nascimento",
