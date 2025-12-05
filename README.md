@@ -1,3 +1,5 @@
+Link do vídeo do projeto funcionando no youtube https://youtu.be/wZEMDvEIvo0
+
 # Loja-de-Carros-Angular-
 
 LuxuryCars: Simulação de E-commerce de Veículos Premium
