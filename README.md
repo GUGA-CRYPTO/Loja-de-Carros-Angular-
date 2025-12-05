@@ -1,3 +1,6 @@
+Link do vídeo do projeto funcionando no youtube
+https://youtu.be/wZEMDvEIvo0
+
 # Luxury Estilizado - Plataforma de Aluguel de Carros
 
 Luxury Estilizado é uma plataforma de e-commerce para aluguel de carros de luxo, desenvolvida com Angular. O projeto foi criado para demonstrar habilidades em desenvolvimento front-end, implementando uma aplicação completa com vitrine de produtos, autenticação de usuário, carrinho de compras e um painel administrativo protegido para gerenciamento.
@@ -101,8 +104,8 @@ src/app/
 
 ## 👤 Autor
 
-**[Seu Nome Completo]**
+**Gustavo Santos Ferreira**
 
-- LinkedIn: [https://www.linkedin.com/in/seu-usuario/](https://www.linkedin.com/in/seu-usuario/)
-- GitHub: [https://github.com/seu-usuario](https://github.com/seu-usuario)
-- Email: seu.email@exemplo.com
+- LinkedIn:https://www.linkedin.com/in/gustavo-santos-104877315/
+- GitHub: https://github.com/GUGA-CRYPTO
+- Email: gu.santos251@gmail.com
